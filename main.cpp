@@ -94,6 +94,7 @@ struct U
             {
                 this->value2 += this->value1 / this->value2;
             } 
+            
             std::cout << "U's staticVal2 updated value: " << this->value2 << std::endl;
         }
         return this->value2 * this->value1;
