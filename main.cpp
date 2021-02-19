@@ -93,7 +93,7 @@ struct U
             while( std::abs(this->value2 - this->value1) > 0.001f )
             {
                 this->value2 += this->value1 / this->value2;
-            }
+            } 
             std::cout << "U's staticVal2 updated value: " << this->value2 << std::endl;
         }
         return this->value2 * this->value1;
