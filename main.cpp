@@ -105,7 +105,7 @@ struct V
 {
     static float staticFunc(U* that, float* newVal )        //10
     {
-        if (that && newVal != nullptr)
+        if (that != nullptr && newVal != nullptr)
         {
             std::cout << "U's value1 value: " << that->value1 << std::endl;
             that->value1 = *newVal;
@@ -142,9 +142,12 @@ int main()
     T t1(9, "text1");                                             //6
     T t2(3, "text2");                                             //6
     
-    T* f;                                            //7
-    auto* smaller = f->compare(5, 7);                              //8
-    std::cout << "the smaller one is << " << smaller->name << std::endl; //9
+    Comparison f;                                            //7
+    auto* smaller = f.compare(&t1, &t2);                              //8
+    if (smaller != nullptr)
+    {
+        std::cout << "the smaller one is << " << smaller->name << std::endl; //9
+    }
     
     U anotherU;
     float updatedValue = 5.f;
