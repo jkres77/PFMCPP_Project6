@@ -92,7 +92,7 @@ struct U
             std::cout << "U's value1 updated value: " << this->value1 << std::endl;
             while( std::abs(this->value2 - this->value1) > 0.001f )
             {
-                this->value2 += this->value1 / this->value2;
+                this->value2 += this->value1 / 2;
             } 
             
             std::cout << "U's staticVal2 updated value: " << this->value2 << std::endl;
@@ -115,7 +115,7 @@ struct V
                 /*
                  write something that makes the distance between that-><#name2#> and that-><#name1#> get smaller
                  */
-                that->value2 += that->value1 / that->value2;
+                that->value2 += that->value1 / 2;
             }
             std::cout << "U's value2 updated value: " << that->value2 << std::endl;
         }
